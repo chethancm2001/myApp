@@ -1,9 +1,8 @@
 const express = require('express')
+const router = require('./routes/routes')
 const app = express()
 
-app.get('/',(req,res)=>{
-    res.send('directing')
-})
+app.use('/',router)
 app.listen(4000,(err)=>{
     if(!err){
         console.log('server is started in port 4000')
