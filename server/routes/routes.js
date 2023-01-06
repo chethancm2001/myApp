@@ -1,12 +1,8 @@
 const router = require('express').Router()
 
-
-
-
-
-
 router.get('/',(req,res)=>{
-    res.send('this is from router')
+
+    res.send(process.env.CRUSH)
 })
 
 module.exports = router
