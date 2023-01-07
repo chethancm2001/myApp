@@ -4,6 +4,8 @@ const router = require('./routes/routes')
 const dbconection = require('./config/dbconfig')
 
 const app = express()
+app.use(express.json())
+app.use(express.urlencoded())
 
 dbconection()
 
